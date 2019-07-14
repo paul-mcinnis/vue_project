@@ -1,5 +1,8 @@
 FROM node:10.16.0-alpine
 
+# addresses build issue 
+RUN npm config set unsafe-perm true
+
 # install simple http server for serving static content
 RUN npm install -g http-server
 

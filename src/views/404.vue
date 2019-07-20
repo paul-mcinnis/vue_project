@@ -1,6 +1,11 @@
 <template>
   <div class="ocean-bg" :style="oceanBg">
-    <h1>404 Page not found !!</h1>
+    <h1>Sorry</h1>
+    <h2>We can't find that page</h2>
+    <router-link to="/">
+      Would you like to
+      <strong>Go to Home?</strong>
+    </router-link>
   </div>
 </template>
 
@@ -16,3 +21,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+h1 {
+  color: red;
+}
+h2 {
+  color: blue;
+}
+strong {
+  font-style: italic;
+  text-decoration: underline;
+}
+</style>

@@ -32,4 +32,31 @@ export default class App extends Vue {}
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 3rem;
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 544px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
 </style>

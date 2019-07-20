@@ -6,8 +6,8 @@
           <h1>Sorry</h1>
           <h2>We can't find that page</h2>
           <router-link to="/">
-            Would you like to
-            <strong>Go to Home?</strong>
+            Would you like to go the the
+            <strong>home page?</strong>
           </router-link>
         </div>
       </div>
@@ -44,12 +44,38 @@ export default class PageNotFound extends Vue {
   background-repeat: no-repeat;
   background-size: cover;
 }
+h1,
+h2 {
+  color: darkslategray;
+}
+
 h1 {
-  color: red;
+  size: 6rem;
 }
 h2 {
-  color: blue;
+  size: 3rem;
 }
+
+/* mobile */
+@media (min-width: 544px) {
+  h1 {
+    size: 1.5rem;
+  }
+  h2 {
+    size: 1rem;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  h1 {
+    size: 3rem;
+  }
+  h2 {
+    size: 1.5rem;
+  }
+}
+
 strong {
   font-style: italic;
   text-decoration: underline;

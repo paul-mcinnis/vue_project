@@ -1,15 +1,16 @@
 <template>
-  <div class="fullscreen">
-    <div>
-      <img id="notfoundcartoon" src="@/assets/img/SadPanda.png" />
-    </div>
-    <div id="notfoundtxt">
-      <h1>Sorry</h1>
-      <h2>We can't find that page</h2>
-      <router-link to="/">
-        Would you like to
-        <strong>Go to Home?</strong>
-      </router-link>
+  <div class="bg" :style="bgimage">
+    <div class="container">
+      <div class="row">
+        <div id="notfoundtxt" class="col-md">
+          <h1>Sorry</h1>
+          <h2>We can't find that page</h2>
+          <router-link to="/">
+            Would you like to
+            <strong>Go to Home?</strong>
+          </router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -19,10 +20,30 @@ import { Component, Vue } from 'vue-property-decorator'
 import BootstrapVue from 'bootstrap-vue'
 
 @Component
-export default class PageNotFound extends Vue {}
+export default class PageNotFound extends Vue {
+  data() {
+    return {
+      bgimage: {
+        backgroundImage: `url(${require('@/assets/img/city-bg.png')})`,
+        height: 100
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>
+.bg {
+  /* Full height */
+  height: 100vh;
+
+  background-image: src= '@/assets/img/city-bg.png';
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 h1 {
   color: red;
 }
@@ -34,12 +55,10 @@ strong {
   text-decoration: underline;
 }
 #notfoundcartoon {
-  float: right;
   padding-top: 100px;
-  width: 30%;
-  margin-left: 10%;
-  margin-right: 20%;
+  width: 70%;
 }
 #notfoundtxt {
+  padding-top: 100px;
 }
 </style>

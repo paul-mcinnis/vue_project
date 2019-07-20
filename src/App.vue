@@ -35,9 +35,11 @@ export default class App extends Vue {}
 
 h1 {
   font-size: 6rem;
+  color: darkslategrey;
 }
 h2 {
   font-size: 3rem;
+  color: darkslategrey;
 }
 
 /* tablet */

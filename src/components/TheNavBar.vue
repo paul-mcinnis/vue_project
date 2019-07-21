@@ -1,8 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link>|
-    <router-link to="/about">About</router-link>|
-    <router-link to="/404">404</router-link>
+    <router-link to="/about">About</router-link>
   </div>
 </template>
 
@@ -20,7 +19,13 @@ export default class TheNavBar extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding: 30px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 100;
 }
 #nav a {
   font-weight: bold;
@@ -29,5 +34,12 @@ export default class TheNavBar extends Vue {}
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+/* mobile */
+@media (max-width: 544px) {
+  #nav {
+    padding: 10px;
+  }
 }
 </style>

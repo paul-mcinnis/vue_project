@@ -48,10 +48,6 @@ strong {
   font-style: italic;
   text-decoration: underline;
 }
-#notfoundcartoon {
-  padding-top: 100px;
-  width: 70%;
-}
 #notfoundtxt {
   padding-top: 100px;
 }

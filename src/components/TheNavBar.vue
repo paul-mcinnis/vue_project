@@ -1,6 +1,6 @@
 <template>
-  <div id="nav" class="navbar" :class="{ 'navbar--hidden': hideBackground }">
-    <router-link to="/">Home</router-link>|
+  <div id="nav" class="nav-bar" :class="{ 'nav-bar--hidden': hideBackground }">
+    <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
   </div>
 </template>
@@ -9,7 +9,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export default class TheNavBar extends Vue {
+export default class TheNavbar extends Vue {
   data() {
     return {
       hideBackground: true
@@ -36,7 +36,7 @@ export default class TheNavBar extends Vue {
 </script>
 
 <style scoped>
-.navbar {
+.nav-bar {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,25 +48,29 @@ export default class TheNavBar extends Vue {
   top: 0;
   width: 100%;
   z-index: 100;
+  font-size: 1.5rem;
 }
 
-.navbar--hidden {
+.nav-bar--hidden {
   background-color: transparent;
 }
 
-.navbar a {
+.nav-bar a {
   font-weight: bold;
   color: black;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.navbar a.router-link-exact-active {
+.nav-bar a.router-link-exact-active {
   color: #669999;
 }
 
 /* mobile */
 @media (max-width: 544px) {
-  .navbar {
+  .nav-bar {
     padding: 10px;
+    font-size: 1rem;
   }
 }
 </style>

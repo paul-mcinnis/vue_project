@@ -3,11 +3,9 @@
     <TheNavBar />
     <div id="coverbanner">
       <img src="@/assets/img/lake.jpg" border="0" />
-      <!-- <img src="@/assets/img/ocean.jpg" border="0" />
-      <img src="@/assets/img/big-sur.jpg" border="0" />-->
     </div>
     <div id="welcome">
-      <h1>Welcome to my site</h1>
+      <h2>Welcome to my site</h2>
       <p>
         My name is Paul. I built this site to devlop my work and play around
         with new technologies. It's a little sparse right now, but there are
@@ -22,14 +20,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import TheNavBar from '@/components/TheNavBar.vue'
-import TheFooter from '@/components/TheFooter.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 @Component({
   components: {
     HelloWorld,
-    TheNavBar,
-    TheFooter
+    TheNavBar
   }
 })
 export default class Home extends Vue {}
@@ -37,12 +33,12 @@ export default class Home extends Vue {}
 
 <style scoped>
 #welcome {
-  height: 5000px;
+  height: 1000px;
 }
 
 #coverbanner img {
   width: 100%;
-  max-height: 66vh;
+  max-height: 50vh;
   object-fit: cover;
 }
 </style>

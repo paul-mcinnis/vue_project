@@ -35,6 +35,7 @@ export default class App extends Vue {}
   padding-top: 20vh;
 }
 
+
 h1 {
   font-size: 6rem;
   color: rgb(38, 38, 38);

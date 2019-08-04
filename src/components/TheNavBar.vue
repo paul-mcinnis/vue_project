@@ -2,6 +2,9 @@
   <div id="nav" class="nav-bar" :class="{ 'nav-bar--hidden': hideBackground }">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
+    <router-link to="/projects">Projects</router-link>
+    <router-link to="/journal">Journal</router-link>
+    <router-link to="/contact">Contact</router-link>
   </div>
 </template>
 

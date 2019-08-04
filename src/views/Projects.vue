@@ -1,7 +1,7 @@
 <template>
   <div class="main" :style="cssProps">
     <TheNavBar />
-    <h1 class="title">This is an about page</h1>
+    <h1 class="title">This is where my projects will go</h1>
   </div>
 </template>
 
@@ -14,11 +14,11 @@ import TheNavBar from '@/components/TheNavBar.vue'
     TheNavBar
   }
 })
-export default class About extends Vue {
+export default class Projects extends Vue {
   data() {
     return {
       cssProps: {
-        backgroundImage: `url(${require('@/assets/img/ocean.jpg')})`
+        backgroundImage: `url(${require('@/assets/img/projects-bg.jpg')})`
       }
     }
   }
